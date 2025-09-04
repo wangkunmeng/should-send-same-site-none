@@ -129,7 +129,7 @@ var shouldSendSameSiteNone = function(req, res, next) {
       res.set("Set-Cookie", cookies);
     }
 
-    writeHead.apply(this, arguments);
+    return writeHead.apply(this, arguments);
   };
   next();
 };
